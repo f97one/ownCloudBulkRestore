@@ -27,7 +27,7 @@ class ListFilesRequestTest {
                 "        <oc:trashbin-original-location></oc:trashbin-original-location>\n" +
                 "        <oc:trashbin-delete-datetime xsi:nil=\"true\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"/>\n" +
                 "        <d:getcontentlength xsi:nil=\"true\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"/>\n" +
-                "        <d:resourcetype>0</d:resourcetype>\n" +
+                "        <d:resourcetype/>\n" +
                 "    </d:prop>\n" +
                 "</d:propfind>\n";
 

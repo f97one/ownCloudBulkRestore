@@ -27,5 +27,5 @@ public class WebDavProperties {
     @XmlElement(name = "getcontentlength", namespace = "DAV:", nillable = true)
     private Long contentLength = null;
     @XmlElement(name = "resourcetype", namespace = "DAV:")
-    private Integer resourceType = null;
+    private ResourceType resourceType = null;
 }
