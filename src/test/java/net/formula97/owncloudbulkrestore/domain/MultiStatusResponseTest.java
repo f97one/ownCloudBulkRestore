@@ -123,10 +123,11 @@ class MultiStatusResponseTest {
         Optional<MultiStatusResponse.Response> responseOptional = resp.getResponse().stream().filter(r -> r.getPropStat().size() == 1).findFirst();
         assertTrue(responseOptional.isPresent());
 
-        WebDavPropStat propStat = responseOptional.get().getPropStat().get(0);
-        assertEquals("testfile2.txt", propStat.getProp().getTrashbinOriginalFilename());
-        assertEquals("nest1/nest3/testfile2.txt", propStat.getProp().getTrashbinOriginalLocation());
-        assertEquals(24, propStat.getProp().getContentLength());
-        assertNull(propStat.getProp().getResourceType().getCollection());
+        WebDavProperties prop = responseOptional.get().getPropStat().get(0).getProp();
+        assertEquals("testfile2.txt", prop.getTrashbinOriginalFilename());
+        assertEquals("nest1/nest3/testfile2.txt", prop.getTrashbinOriginalLocation());
+        assertEquals(24, prop.getContentLength());
+        assertNull(prop.getResourceType().getCollection());
+        assertEquals("2021-06-26T09:57:41Z", prop.getTrashbinDeleteDatetime().toString());
     }
 }
