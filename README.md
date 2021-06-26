@@ -1,0 +1,2 @@
+# ownCloudBulkRestore
+ownCloudのTrashbinからバルクリストアするユーティリティ
